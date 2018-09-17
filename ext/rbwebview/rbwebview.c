@@ -78,12 +78,14 @@ VALUE rbwebview_set_fullscreen(VALUE self, VALUE arg1)
 }
 
 
-VALUE rbwebview_alloc(VALUE klass) {
+VALUE rbwebview_alloc(VALUE klass)
+{
   struct webview *w;
   return Data_Make_Struct(klass, struct webview, NULL, free, w);
 }
 
-VALUE rbwebview_initialize(int argc, VALUE *argv, VALUE self) {
+VALUE rbwebview_initialize(int argc, VALUE *argv, VALUE self)
+{
   VALUE title, url, width, height, resizable;
   rb_scan_args(argc, argv, "05", &title, &url, &width, &height, &resizable);
 
