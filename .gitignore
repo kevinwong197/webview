@@ -1,0 +1,9 @@
+*.so
+*.gem
+*.bundle
+*.o
+*.a
+mkmf.log
+.bundle
+Gemfile.lock
+tmp
