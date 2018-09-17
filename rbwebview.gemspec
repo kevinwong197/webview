@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version = '0.0.1'
   s.author = ''
   s.summary = 'ruby webview binding'
-  s.files = Dir['{./**/*,[A-Z]*}'].reject {|f| f.ends_with('.so')}
+  s.files = `git ls-files`.split("\n")
   s.extensions << 'ext/rbwebview/extconf.rb'
   s.has_rdoc = false
 end
