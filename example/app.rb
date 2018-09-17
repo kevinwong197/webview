@@ -56,7 +56,7 @@ Webview.init
 sleep(1) until Backend.settings.running?
 
 while(Webview.loop(1) == 0) do
-  sleep 0.01
+  sleep 0.0001
   next if ProcQueue.size == 0
   command = ProcQueue.pop
   command.call
